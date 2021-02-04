@@ -1,17 +1,20 @@
 extends Area2D
 
 
-func _process(delta: float) -> void:
-	position.x += delta * 40
+func _process(delta: float):
+	position.x += 10 * delta
 
 
-func _on_Bullet_body_entered(body: Node) -> void:
+func _on_Bullet_body_entered(body):
 	if body is Player:
-		body.flash()
-		print("Gameover")
+		if body.has_shield():
+			body.remove_shield()
+		else:
+			body.flash()
+			print("GAMEOVER")
+		queue_free()
 
 	if body is Enemy:
 		body.flash()
-		print("Victory")
-
-	set_process(false)
+		print("VICTORY")
+		queue_free()

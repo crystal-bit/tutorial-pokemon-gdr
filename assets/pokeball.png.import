@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bullet.png-d08a96e5b6efabc925428efa1e682262.stex"
+path="res://.import/pokeball.png-d65253939b3dcb65d9eae33b8a5e7380.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/aseprite/bullet.png"
-dest_files=[ "res://.import/bullet.png-d08a96e5b6efabc925428efa1e682262.stex" ]
+source_file="res://assets/pokeball.png"
+dest_files=[ "res://.import/pokeball.png-d65253939b3dcb65d9eae33b8a5e7380.stex" ]
 
 [params]
 

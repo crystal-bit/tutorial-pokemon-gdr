@@ -1,13 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/pokemons/1.png" type="Texture" id=1]
-[ext_resource path="res://assets/pokemons/12.png" type="Texture" id=2]
 [ext_resource path="res://pokemon.gd" type="Script" id=3]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
-
-onready var poke = $Bulba
 
 
 func _ready():
@@ -33,16 +30,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Butterfee" type="Sprite" parent="."]
-position = Vector2( 222, 113 )
-texture = ExtResource( 2 )
-script = ExtResource( 3 )
-pokemon_name = "Butterfree"
-
 [node name="Bulbasaur" type="Sprite" parent="."]
-position = Vector2( 142, 118 )
+position = Vector2( 222, 113 )
 texture = ExtResource( 1 )
 script = ExtResource( 3 )
-pokemon_name = "Bulbasaur"
-hp = 10
-attack = 5

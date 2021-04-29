@@ -9,18 +9,24 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "PokeData",
+"language": "GDScript",
+"path": "res://pokemon/PokeData.gd"
+}, {
 "base": "Sprite",
 "class": "Pokemon",
 "language": "GDScript",
 "path": "res://scripts/pokemon.gd"
 } ]
 _global_script_class_icons={
+"PokeData": "",
 "Pokemon": "res://assets/pokeball.png"
 }
 
 [application]
 
-config/name="tutorial_class_name"
+config/name="tutorial-pokemon-gdr-mechanics"
 run/main_scene="res://game.tscn"
 config/icon="res://assets/icon.png"
 

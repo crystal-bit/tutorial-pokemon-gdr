@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://objects/pokemon/pokemon-resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+pokemon_name = "Scricciolo"
+hp = 100
+attack = 50
+defense = 20
+special_attack = 30
+special_defense = 44
+move_set = [  ]
+current_hp = 50
+experience = 800

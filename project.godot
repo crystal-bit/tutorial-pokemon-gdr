@@ -9,19 +9,19 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Resource",
-"class": "PokeData",
-"language": "GDScript",
-"path": "res://pokemon/PokeData.gd"
-}, {
 "base": "Sprite",
 "class": "Pokemon",
 "language": "GDScript",
-"path": "res://scripts/pokemon.gd"
+"path": "res://objects/pokemon/pokemon.gd"
+}, {
+"base": "Resource",
+"class": "PokemonResource",
+"language": "GDScript",
+"path": "res://objects/pokemon/pokemon-resource.gd"
 } ]
 _global_script_class_icons={
-"PokeData": "",
-"Pokemon": "res://assets/pokeball.png"
+"Pokemon": "res://assets/pokeball.png",
+"PokemonResource": ""
 }
 
 [application]

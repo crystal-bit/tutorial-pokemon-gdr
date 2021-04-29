@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/pokemons/1.png" type="Texture" id=1]
-[ext_resource path="res://assets/pokemons/2.png" type="Texture" id=2]
-[ext_resource path="res://scripts/pokemon.gd" type="Script" id=3]
+[ext_resource path="res://objects/pokemon/resources/bulbasaur.tres" type="Resource" id=2]
+[ext_resource path="res://objects/pokemon/pokemon.gd" type="Script" id=3]
 
 [node name="Game" type="Node2D"]
 __meta__ = {
@@ -26,8 +26,4 @@ __meta__ = {
 position = Vector2( 222, 113 )
 texture = ExtResource( 1 )
 script = ExtResource( 3 )
-
-[node name="Ivysaur" type="Sprite" parent="."]
-position = Vector2( 309.351, 112.695 )
-texture = ExtResource( 2 )
-script = ExtResource( 3 )
+pokemon_resource = ExtResource( 2 )

@@ -26,7 +26,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="tutorial-pokemon-gdr-mechanics"
+config/name="tutorial_class_name"
 run/main_scene="res://game.tscn"
 config/icon="res://assets/icon.png"
 

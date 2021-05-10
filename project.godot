@@ -13,15 +13,9 @@ _global_script_classes=[ {
 "class": "Pokemon",
 "language": "GDScript",
 "path": "res://objects/pokemon/pokemon.gd"
-}, {
-"base": "Resource",
-"class": "PokemonResource",
-"language": "GDScript",
-"path": "res://objects/pokemon/pokemon-resource.gd"
 } ]
 _global_script_class_icons={
-"Pokemon": "res://assets/pokeball.png",
-"PokemonResource": ""
+"Pokemon": "res://assets/pokeball.png"
 }
 
 [application]

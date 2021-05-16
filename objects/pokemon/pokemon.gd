@@ -1,7 +1,9 @@
 class_name Pokemon, "res://assets/pokeball.png"
 extends Sprite
 
-export(int) var hp
-export(int) var attack
-export(int) var defense
-export(int) var speed
+export(Resource) var pokemon_resource
+
+func _ready() -> void:
+	print(pokemon_resource.pokemon_name)
+	print(pokemon_resource.pokedex_id)
+	print(pokemon_resource.attack)

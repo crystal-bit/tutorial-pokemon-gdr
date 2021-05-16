@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/pokemons/1.png" type="Texture" id=1]
+[ext_resource path="res://objects/pokemon/bulbasaur.tres" type="Resource" id=2]
 [ext_resource path="res://objects/pokemon/pokemon.gd" type="Script" id=3]
 
 [node name="Game" type="Node2D"]
@@ -21,7 +22,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bulbasaur" type="Sprite" parent="."]
+[node name="PokemonNode" type="Sprite" parent="."]
 position = Vector2( 222, 113 )
 texture = ExtResource( 1 )
 script = ExtResource( 3 )
+pokemon_resource = ExtResource( 2 )

@@ -6,12 +6,12 @@
 
 [resource]
 script = ExtResource( 1 )
+pokemon_name = "Bulbasaur"
+pokedex_id = 1
+front_texture = ExtResource( 2 )
+back_texture = ExtResource( 3 )
 hp = 45
 attack = 49
 defense = 49
 speed = 45
 special = 65
-pokedex_id = 1
-pokemon_name = "Bulbasaur"
-front_texture = ExtResource( 2 )
-back_texture = ExtResource( 3 )

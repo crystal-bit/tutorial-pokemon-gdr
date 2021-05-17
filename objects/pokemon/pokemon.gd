@@ -4,6 +4,4 @@ extends Sprite
 export(Resource) var pokemon_resource
 
 func _ready() -> void:
-	print(pokemon_resource.pokemon_name)
-	print(pokemon_resource.pokedex_id)
-	print(pokemon_resource.attack)
+	pass

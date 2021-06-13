@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://objects/pokemon/bulbasaur.tres" type="Resource" id=2]
+[ext_resource path="res://assets/pokemons/2.png" type="Texture" id=1]
+[ext_resource path="res://objects/pokemon/ivysaur.tres" type="Resource" id=2]
 [ext_resource path="res://objects/pokemon/pokemon.gd" type="Script" id=3]
+[ext_resource path="res://objects/Pokedex.gd" type="Script" id=4]
+[ext_resource path="res://game.gd" type="Script" id=5]
 
 [node name="Game" type="Node2D"]
+script = ExtResource( 5 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -23,5 +27,9 @@ __meta__ = {
 
 [node name="PokemonNode" type="Sprite" parent="."]
 position = Vector2( 222, 113 )
+texture = ExtResource( 1 )
 script = ExtResource( 3 )
 pokemon_resource = ExtResource( 2 )
+
+[node name="Pokedex" type="Node" parent="."]
+script = ExtResource( 4 )

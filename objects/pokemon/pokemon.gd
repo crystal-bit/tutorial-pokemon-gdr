@@ -1,5 +1,6 @@
 class_name Pokemon, "res://assets/pokeball.png"
 extends Sprite
+tool
 
 export(Resource) var pokemon_resource setget set_pokemon_resource
 

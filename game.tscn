@@ -1,7 +1,5 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/pokemons/2.png" type="Texture" id=1]
-[ext_resource path="res://objects/pokemon/ivysaur.tres" type="Resource" id=2]
 [ext_resource path="res://objects/pokemon/pokemon.gd" type="Script" id=3]
 [ext_resource path="res://objects/Pokedex.gd" type="Script" id=4]
 [ext_resource path="res://game.gd" type="Script" id=5]
@@ -27,9 +25,7 @@ __meta__ = {
 
 [node name="PokemonNode" type="Sprite" parent="."]
 position = Vector2( 222, 113 )
-texture = ExtResource( 1 )
 script = ExtResource( 3 )
-pokemon_resource = ExtResource( 2 )
 
 [node name="PokedexData" type="Node" parent="."]
 script = ExtResource( 4 )
@@ -46,7 +42,6 @@ __meta__ = {
 [node name="name" type="Label" parent="VBoxContainer"]
 margin_right = 110.0
 margin_bottom = 14.0
-text = "{pokemon name}"
 __meta__ = {
 "_edit_use_anchors_": false
 }

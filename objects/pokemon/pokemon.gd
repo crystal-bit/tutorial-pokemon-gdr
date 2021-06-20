@@ -9,4 +9,3 @@ func _ready() -> void:
 func set_pokemon_resource(res):
 	pokemon_resource = res
 	texture = res.front_texture
-	print(res.pokedex_id, " ",  res.pokemon_name, " ", res.hp)

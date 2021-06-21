@@ -30,4 +30,4 @@ Before recording;
 ## License
 
 - Source code: MIT
-- Assets: CC0
+- Assets: copyrighted, used only for educational purpose. See https://www.spriters-resource.com/game_boy_advance/pokemonfireredleafgreen/

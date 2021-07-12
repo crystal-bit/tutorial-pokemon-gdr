@@ -4,7 +4,6 @@ extends Node2D
 func _ready():
 	var pokemons = $PokedexData.pokemons
 	$Pokemons.show_pokemons(pokemons)
-
 	var f = File.new()
 	if f.file_exists("user://game_save.tres"):
 		load_saved_pokemons()
@@ -18,9 +17,8 @@ func load_saved_pokemons():
 		print("Error while loading game save")
 
 
-
 func _on_Button_pressed() -> void:
-	var game_save = GameSave.new()
+	var game_save = GameSave.new() # TODO: probably better to have it as an autoload
 	game_save.pokemons = []
 	ResourceSaver.save("user://game_save.tres", game_save)
 	var pokemon_nodes = $Pokemons.get_selected_pokemons()

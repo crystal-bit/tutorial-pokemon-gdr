@@ -29,7 +29,7 @@ func on_mouse_hover(p):
 	if hovered_pokemon == p:
 		return
 	hovered_pokemon = p
-	print(hovered_pokemon.pokemon_resource.pokemon_name)
+#	print(hovered_pokemon.pokemon_resource.pokemon_name)
 
 
 func on_mouse_exited(p):

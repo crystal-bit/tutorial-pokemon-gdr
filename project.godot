@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "GameSave",
+"language": "GDScript",
+"path": "res://objects/GameSave.gd"
+}, {
 "base": "Sprite",
 "class": "Pokemon",
 "language": "GDScript",
@@ -20,6 +25,7 @@ _global_script_classes=[ {
 "path": "res://objects/pokemon/pokemon-resource.gd"
 } ]
 _global_script_class_icons={
+"GameSave": "",
 "Pokemon": "res://assets/pokeball.png",
 "PokemonResource": ""
 }
@@ -32,12 +38,12 @@ config/icon="res://assets/pokemons/1.png"
 
 [display]
 
-window/size/width=512
-window/size/height=300
-window/size/test_width=1024
-window/size/test_height=600
+window/size/width=700
+window/size/height=400
+window/size/test_width=1300
+window/size/test_height=800
 window/stretch/mode="2d"
-window/stretch/aspect="keep"
+window/stretch/aspect="expand"
 
 [importer_defaults]
 

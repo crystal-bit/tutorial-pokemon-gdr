@@ -1,36 +1,36 @@
 extends Node2D
 
-onready var labels = {
-	name = $VBoxContainer/name,
-	hp = $VBoxContainer/hp
-}
 
 func _ready():
-#	var data = $PokedexData.pokemons[150]
-#	$PokemonNode.set_pokemon_resource(data)
-	show_pokemons()
-
-
-func show_pokemons():
-	labels.name.text = ""
 	var pokemons = $PokedexData.pokemons
-	var y = 0
-	var x = 0
-	for poke in pokemons:
-		var p = Pokemon.new()
-		p.set_pokemon_resource(poke)
-		p.position.x = 30 + x
-		p.position.y = 20 + y
-		if x > 350:
-			x = 0
-			y += 40
-		else:
-			x+= 50
-		p.scale *= 0.7
-		add_child(p)
+	$Pokemons.show_pokemons(pokemons)
 
-func on_twn_started(twn, some, p: PokemonResource):
-	yield(get_tree().create_timer(2), "timeout")
-	labels.name.text = str(p.pokedex_id) + " - " +p.pokemon_name
-	labels.hp.text = "HP: " + str(p.hp)
+	var game_save = load("res://game_save.tres") as GameSave
+	if game_save:
+		for p in game_save.pokemons:
+			var label = Label.new()
+			label.text = p.pokemon_name
+			$SavedPokemons.add_child(label)
+			$Pokemons.select_pokemon(p)
+	else:
+		print("Error while loading game save")
+
+
+func load_saved_pokemons():
+	pass
+
+
+func _on_Button_pressed() -> void:
+	var game_save = GameSave.new()
+	game_save.pokemons = []
+
+	var pokemon_nodes = $Pokemons.get_selected_pokemons()
+	for node in pokemon_nodes:
+		game_save.pokemons.append(node.pokemon_resource)
+
+	var status = ResourceSaver.save("res://game_save.tres", game_save)
+	if status == OK:
+		print("Game saved")
+	else:
+		print("Error while saving: ", status)
 

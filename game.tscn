@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://objects/pokemon/pokemon.gd" type="Script" id=3]
+[ext_resource path="res://objects/SavedPokemons.gd" type="Script" id=1]
+[ext_resource path="res://objects/Pokemons.gd" type="Script" id=2]
 [ext_resource path="res://objects/Pokedex.gd" type="Script" id=4]
 [ext_resource path="res://game.gd" type="Script" id=5]
 
@@ -10,12 +11,46 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="Pokemons" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 497.592
+margin_top = 59.4696
+margin_right = 693.592
+margin_bottom = 73.4696
+text = "Saved Pokemons:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 495.679
+margin_top = 32.3269
+margin_right = 538.679
+margin_bottom = 52.3269
+text = "SAVE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SavedPokemons" type="VBoxContainer" parent="."]
+margin_left = 497.0
+margin_top = 82.0
+margin_right = 685.0
+margin_bottom = 376.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 color = Color( 0.356863, 0.356863, 0.356863, 1 )
 __meta__ = {
 "_edit_group_": true,
@@ -23,33 +58,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PokemonNode" type="Sprite" parent="."]
-position = Vector2( 222, 113 )
-script = ExtResource( 3 )
-
 [node name="PokedexData" type="Node" parent="."]
 script = ExtResource( 4 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 16.0
-margin_top = 32.0
-margin_right = 126.0
-margin_bottom = 72.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="name" type="Label" parent="VBoxContainer"]
-margin_right = 110.0
-margin_bottom = 14.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="hp" type="Label" parent="VBoxContainer"]
-margin_top = 18.0
-margin_right = 110.0
-margin_bottom = 32.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
